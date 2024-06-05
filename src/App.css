@@ -1,38 +1,93 @@
 .App {
-  text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1200px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    color: #0baf94;
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 3px 3px #f90;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sub-title{
+    color: #f90;
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: 3px 3px #0baf94;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.divider{
+    border-bottom: 4px solid rgba(255, 41, 41, .555);
+    height: 1px;
+    margin: 20px auto;
+    width: 50%;
 }
-
-.App-link {
-  color: #61dafb;
+.avatar-group{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.avatar-wrapper{
+    background-color: #fff;
+    border: 15px solid #0baf94;
+    border-radius: 40px;
+    display: inline-block;
+    padding: 50px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: calc(50% - 205px);
 }
+.button{
+    background-color: #ca5119;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 0 10px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+h2{
+    color: #a5510d;
+}
+.list-section {
+    max-width: 700px;
+    text-align: center;
+}
+.list{
+    background-color: rgba(255, 166, 0, .4);
+    border: 5px solid orange;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 10px 0;
+    padding: 20px;
+}
+.square{
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .151);
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 50px;
+}
+.square:hover {
+	background-color: rgba(255, 137, 116, 0.315);
+	transition-duration: 0.2s;
+}
+.img-center{
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.gap-30 {
+	gap: 30px;
+}
+.text-center {
+	text-align: center;
+}   
