@@ -8,7 +8,7 @@ function PartList({ length, status, setState, clickIndex }) {
   }
 
   const checkClick = (index) => {
-    console.log(index);
+    console.log(index === checkClick);
     setState(index + 1);
   };
 
@@ -20,7 +20,7 @@ function PartList({ length, status, setState, clickIndex }) {
           <>
             <div
               className="square"
-              id={index === clickIndex - 1 ? `inHover` : ``}
+              id={index + 1 === clickIndex ? `inHover` : ``}
               onClick={() => checkClick(index)}
             >
               <img

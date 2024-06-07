@@ -24,9 +24,6 @@ function App() {
   const [clothing1, setClothing1] = useState(1);
   const [clothing2, setClothing2] = useState(1);
   const [clothing3, setClothing3] = useState(1);
-  const clickIndex = bodyAvatar;
-
-  // console.log(bodyAvatar, clickIndex);
 
   const random = () => {
     setBodyAvatar(Math.ceil(Math.random() * total.body));
@@ -62,7 +59,7 @@ function App() {
               clothing3={clothing3}
             />
             <div className="text-center" style={{ position: "relative" }}>
-              <button className="button" onClick={random}>
+              <button className="button" onClick={() => random()}>
                 Random
               </button>
             </div>
@@ -73,34 +70,50 @@ function App() {
             length={total.body}
             status={"body"}
             setState={setBodyAvatar}
-            clickIndex={clickIndex}
+            clickIndex={bodyAvatar}
           />
-          <PartList length={total.eyes} status={"eyes"} setState={setEyes} />
-          <PartList length={total.hair} status={"hair"} setState={setHair} />
+          <PartList
+            length={total.eyes}
+            status={"eyes"}
+            setState={setEyes}
+            clickIndex={eyes}
+          />
+
+          <PartList
+            length={total.hair}
+            status={"hair"}
+            setState={setHair}
+            clickIndex={hair}
+          />
           <PartList
             length={total.eyebrows}
             status={"eyebrows"}
             setState={setEyesBrows}
+            clickIndex={eyebrows}
           />
           <PartList
             length={total.glasses}
             status={"accessories/glasses"}
             setState={setGlasses}
+            clickIndex={glasses}
           />
           <PartList
             length={total.clothing1}
             status={"clothes/layer_1"}
             setState={setClothing1}
+            clickIndex={clothing1}
           />
           <PartList
             length={total.clothing2}
             status={"clothes/layer_2"}
             setState={setClothing2}
+            clickIndex={clothing2}
           />
           <PartList
             length={total.clothing3}
             status={"clothes/layer_3"}
             setState={setClothing3}
+            clickIndex={clothing3}
           />
         </div>
       </div>
